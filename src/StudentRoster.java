@@ -151,8 +151,8 @@ public class StudentRoster {
 			// Try to open/create the file and input the student roster to it.
 			outputStream = new FileOutputStream("studentRoster.txt");
 			fileWriter = new PrintWriter(outputStream);
-			String inventoryOutput = buildFullRosterString(studentRoster, scnr);
-			fileWriter.println(inventoryOutput);
+			String rosterOutput = buildFullRosterString(studentRoster, scnr);
+			fileWriter.println(rosterOutput);
 			output = "Successfully saved student roster.";
 		
 		// Handle all the errors and update output.
