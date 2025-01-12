@@ -74,6 +74,9 @@ public class Student {
 	
 	/** 
 	* A public method to set the student's name.
+	* 
+	* @param name The name to set on the student.
+	* 
 	*/
 	public void setName(String name) {
 		this.name = name;
@@ -81,6 +84,9 @@ public class Student {
 	
 	/**a
 	* A public method to set the student's address.
+	* 
+	* @param address The address to set on the student.
+	* 
 	*/
 	public void setAddress(String address) {
 		this.address = address;
@@ -88,6 +94,9 @@ public class Student {
 	
 	/** 
 	* A public method to set the student's GPA.
+	* 
+	* @param GPA The GPA to set on the student.
+	* 
 	*/
 	public void setGPA(double GPA) {
 		this.GPA = GPA;
@@ -179,7 +188,7 @@ public class Student {
 			try {
 				output = output + String.format("Student Name: %s\n", this.name);
 				output = output + String.format("Student Address: %s\n", this.address);
-				output = output + String.format("Student Name: %.1f\n", this.GPA);
+				output = output + String.format("Student GPA: %.1f\n", this.GPA);
 			} catch (IllegalFormatException e) {
 				// Invalid formatting and so set output to the invalid student output
 				output = invalidStudentOutput;
@@ -201,8 +210,9 @@ public class Student {
 	}
 	
 	/** 
-	* A private method to add the student's GPA by requesting the valid information from the user.
+	* A private method to check if the value entered for the GPA is the correct one.
 	* 
+	* @param output The output to show the user to check if the value entered is correct.
 	* @param scnr A Scanner to get value from user.
 	* 
 	* @return A boolean indicating if the value entered is what the user wants to keep.
